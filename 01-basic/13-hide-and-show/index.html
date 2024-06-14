@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html ng-app="myModule">
+
+	<head>
+		
+		<meta charset="utf-8">
+		<title>This is Angular JS</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+
+	<body>
+
+		
+		<div ng-controller="myController">
+
+			<input type="checkbox" ng-model="hideSalary" name="">
+			<!--This returns true or false-->
+			
+			<table>
+				
+				<thead>
+					
+					<tr>
+						
+						<th>Name</th>
+						<th>Gender</th>
+						<th ng-hide="hideSalary">Salary</th>
+						<th ng-show="hideSalary">Salary</th>
+
+						<!--
+							When it turns true
+							ng-hide will hide the salary.
+							but ng-show will show the salary
+						-->
+
+
+					</tr>
+
+				</thead>
+
+				<tbody>
+					
+						<tr ng-repeat="emp in employees">
+							
+							<td>{{emp.name}}</td>
+							<td>{{emp.gender}}</td> 
+							<td ng-hide="hideSalary">{{emp.salary}}</td>
+							<td ng-show="hideSalary">#####</td>
+
+								<!--
+							When it turns true
+							ng-hide will hide the salary colunms.
+							but ng-show will show the #####
+						-->
+
+						</tr>
+
+				</tbody>
+
+
+			</table>
+
+			
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+		<script type="text/javascript" src="filter.js"></script>
+
+	
+	</body>
+
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html ng-app="app1">
+
+	<head>
+		
+		<meta charset="utf-8">
+		<title>This is Angular JS</title>
+		
+	</head>
+
+	<body>
+
+		<div ng-controller="ctrl1">
+			
+			
+
+			<ol>
+
+					<li ng-repeat="gor in groceryItems">{{gor.item}}</li>
+
+					<!--
+						
+						ng-if="$index > 0"
+						Means start from greter then 0 means 1.
+
+					-->
+
+			</ol>
+
+			<select id="sele1" ng-model="item_name" ng-options="x.item for x in groceryItems">
+				
+				
+
+			</select>
+
+			
+
+				<h4 id="editPlace" ng-model="editItem">You Have Selected {{item_name.item}}</h4>
+
+
+				
+				
+
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+		<script type="text/javascript">
+			
+
+
+		</script>
+	
+	</body>
+
+
+</html>

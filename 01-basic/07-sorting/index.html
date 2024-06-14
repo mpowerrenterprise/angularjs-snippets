@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html ng-app="myModule">
+
+	<head>
+		
+		<meta charset="utf-8">
+		<title>This is Angular JS</title>
+		
+	</head>
+
+	<body>
+
+		
+		<div ng-controller="myController">
+
+		<select ng-model="sortC">
+			
+			<option value="name">Name ASC</option>
+			<option value="dateOfBirth">DOB ASC</option>
+			<option value="gender">Gender ASC</option>
+			<option value="-salary">Salary DES</option>
+
+		</select>
+
+			<table>	
+					<thead>
+						
+						<tr>
+							
+							<th>Name</th>
+							<th>Date Of Birth</th>
+							<th>Gender</th>
+							<th>Salary</th>
+							<th>Salary</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody>
+						
+						<tr ng-repeat="e in employee | orderBy: sortC">
+
+							<!--orderBy:'name':false means ASC ordering-->
+							<!--orderBy:'name':true means DSE ordering-->
+							<!--orderBy:'-name' DSE ordering-->
+							<!--orderBy:'+name' ASC ordering-->
+
+							<td>{{e.name | uppercase}}</td> 
+							<td>{{e.dateOfBirth |date:"dd/mm/yyyy"}}</td>
+							<td>{{e.gender | lowercase}}</td>
+							<td>{{e.salary | number:2}}</td>
+							<td>{{e.salary | currency:"$"}}</td>
+							
+						</tr>
+
+					</tbody>
+			</table>
+
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+
+	
+	</body>
+
+
+</html>

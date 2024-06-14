@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html ng-app="myModule">
+
+	<head>
+		
+		<meta charset="utf-8">
+		<title>This is Angular JS</title>
+		
+	</head>
+
+	<body>
+
+		
+		<div ng-controller="myController">
+
+			<h2>{{usaData.country}}</h2>
+			<h2>{{usaData.capital}}</h2>
+			<h2>{{usaData.fileSrc}}</h2>
+			<img ng-src={{usaData.fileSrc}} style="width: 350px; height: 200px;">
+			<!--
+			
+			01.ng-src will work perfectly. 
+			02. src will return a error at first time.
+
+			--->
+
+
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+
+	
+	</body>
+
+
+</html>
