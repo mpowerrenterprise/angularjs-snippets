@@ -1,0 +1,43 @@
+# Basic Snippets
+
+## 1-example
+
+### HTML COde
+
+```html
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<meta charset="utf-8">
+		<title>This is Angular JS</title>
+		
+	</head>
+
+	<body>
+
+		<div ng-app="">
+			
+			<input type="text" ng-model="name">
+			<h1 ng-bind="name"><h1>
+
+		</div>
+
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+	
+	</body>
+
+
+</html>
+
+
+```
+
+### Output
+
+![Image](media/1.png)
